@@ -35,31 +35,26 @@
    </A></H4>
 
 <P>
-GLPK (<U>G</U>NU <U>L</U>inear <U>P</U>rogramming <U>K</U>it) is a set
-of routines written in the ANSI C programming language and organized in
-the form of a library. This package is intended for solving large scale
-linear programming problems by means of the revised simplex method.
+GLPK (<U>G</U>NU <U>L</U>inear <U>P</U>rogramming <U>K</U>it)
+is a set of routines written in ANSI C and organized in the form of a
+library. This package is intended for solving large-scale linear
+programming (LP), mixed integer linear programming (MIP), and other
+related problems.
 
 <P>
-GLPK implements the following main features:
+GLPK has the following main features:
 
 <UL>
 <LI>
-application program interface;
+implementation of the revised simplex method (based on sparse matrix
+technique, steepest edge pricing, and two-pass pivoting technique);
 <LI>
-sparse matrix technique;
+implementation of the primal-dual interior point method;
 <LI>
-sparse gaussian elimination based on Markowitz strategy and Duff search
-technique used for reinverting the basis;
+implementation of the branch-and-bound procedure (based on the dual
+simplex method);
 <LI>
-elimination form of the inverse;
-<LI>
-Reid's form of the inverse based on Bartels & Golub and Forrest & Tomlin
-updating technique;
-<LI>
-steepest edge pricing (for both primal and dual simplex);
-<LI>
-Harris' two-pass pivoting technique (for both primal and dual simplex).
+application program interface (API).
 </UL>
 
 <P>
@@ -80,8 +75,10 @@ How to get GNU Software</A>.
 <P>
 <H4><A HREF="#TOCdocumentation" NAME="documentation">Documentation</A>
    </H4>
-GLPK documentation can be found on in the same subdirectory as GLPK
-distribution.
+The documentation for GLPK is divided into the User's Guide and the
+Library Reference. The texinfo source for both of these are included in
+the main distribution file. Alternatively, already built Postscript
+versions can be found on in the same subdirectory as GLPK distribution.
 
 <P>
 <H4><A HREF="#TOClists" NAME="lists">Mailing Lists/Newsgroups</A></H4>
@@ -164,8 +161,9 @@ The GLPK package is a part of the GNU project, released under the aegis
 of GNU.
 
 <P>
-Copyright © 2000 Andrew Makhorin, Department for Applied Informatics,
-Moscow Aviation Institute, Moscow, Russia. All rights reserved.
+Copyright © 2000, 2001 Andrew Makhorin, Department for Applied
+Informatics, Moscow Aviation Institute, Moscow, Russia. All rights
+reserved.
 
 <P>
 Free Software Foundation, Inc., 59 Temple Place — Suite 330, Boston,
@@ -176,7 +174,7 @@ Verbatim copying and distribution of this entire article is permitted
 in any medium, provided this notice is preserved.
 
 <P>
-Updated: 10 Nov 2000
+Updated: 16 Feb 2001
 
 <HR>
 </BODY>
