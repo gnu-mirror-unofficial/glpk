@@ -5,11 +5,11 @@
 <META NAME="keywords" CONTENT="glpk">
 </HEAD>
 <BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#1F00FF" ALINK="#FF0000"
-   VLINK="#9900DD">
-<H3>GLPK</H3>
+VLINK="#9900DD">
+<H3>GLPK (GNU Linear Programming Kit)</H3>
 <A HREF="/graphics/agnuhead.html"><IMG SRC="/graphics/gnu-head-sm.jpg"
-   ALT=" [image of the Head of a GNU] "
-   WIDTH="129" HEIGHT="122"></A>
+ALT=" [image of the Head of a GNU] "
+WIDTH="129" HEIGHT="122"></A>
 
 <P>
 <HR>
@@ -33,65 +33,66 @@
 
 <P>
 <H4><A HREF="#TOCintroduction" NAME="introduction">Introduction to GLPK
-   </A></H4>
+</A></H4>
 
 <P>
-GLPK (<U>G</U>NU <U>L</U>inear <U>P</U>rogramming <U>K</U>it)
-is a set of routines written in ANSI C and organized in the form of a
-library. This package is intended for solving large-scale linear
-programming (LP), mixed integer linear programming (MIP), and other
-related problems.
+The GLPK (<U>G</U>NU <U>L</U>inear <U>P</U>rogramming <U>K</U>it)
+package is intended for solving large-scale linear programming (LP),
+mixed integer programming (MIP), and other related problems. It is a set
+of routines written in ANSI C and organized in the form of a callable
+library.
 
 <P>
-GLPK has the following main features:
+GLPK supports the GNU MathProg language, which is a subset of the AMPL
+language.
+
+<P>
+The GLPK package includes the following main components:
 
 <UL>
 <LI>
-implementation of the revised simplex method (based on sparse matrix
-technique, steepest edge pricing, and two-pass pivoting technique);
+Revised simplex method.
 <LI>
-implementation of the primal-dual interior point method;
+Primal-dual interior point method.
 <LI>
-implementation of the branch-and-bound procedure (based on the dual
-simplex method);
+Branch-and-bound method.
 <LI>
-application program interface (API).
+Translator for GNU MathProg.
+<LI>
+Application program interface (API).
+<LI>
+Stand-alone LP/MIP solver.
 </UL>
 
 <P>
-<strong>Please note that the current version of GLPK is tentative.
-   </strong>
-
-<P>
 <H4><A HREF="#TOCdownloading" NAME="downloading">Downloading GLPK</A>
-   </H4>
+</H4>
 
 <P>
-GLPK distribution can be found on in the subdirectory
-<CODE>/gnu/glpk/</CODE> on your favorite <A HREF="/prep/ftp.html">
-GNU mirror</A>. For other ways to obtain GLPK, please read
-<A HREF="/software/software.html#HowToGetSoftware">
-How to get GNU Software</A>.
+The GLPK distribution can be found in the subdirectory
+<CODE>/gnu/glpk/</CODE> on your favorite <A HREF="/prep/ftp.html">GNU
+mirror</A>. For other ways to obtain GLPK, please read
+<A HREF="/software/software.html#HowToGetSoftware">How to get GNU
+Software</A>.
 
 <P>
 <H4><A HREF="#TOCdocumentation" NAME="documentation">Documentation</A>
-   </H4>
-The documentation for GLPK is divided into the User's Guide and the
-Library Reference. The texinfo source for both of these are included in
-the main distribution file. Alternatively, already built Postscript
-versions can be found on in the same subdirectory as GLPK distribution.
+</H4>
+The GLPK documentation consists of the Reference Manual and the
+description of the GNU MathProg language. Both these documents are
+included in the distribution (in LaTeX, DVI, and PostScript formats).
 
 <P>
 <H4><A HREF="#TOClists" NAME="lists">Mailing Lists/Newsgroups</A></H4>
-GLPK now has two mailing lists:
+GLPK has two mailing lists:
 <A HREF="mailto:help-glpk@gnu.org">&lt;help-glpk@gnu.org&gt;</A>
 and <A HREF="mailto:bug-glpk@gnu.org">&lt;bug-glpk@gnu.org&gt;</A>.
 
 <P>
-The main discussion list is 
+The main discussion list is
 <A HREF="mailto:help-glpk@gnu.org">&lt;help-glpk@gnu.org&gt;</A>,
-and is used to discuss all aspects of GLPK, including development and
-porting.
+and is used to discuss all aspects of GLPK, including its development
+and porting.
 
 <P>
 Announcements about GLPK and most other GNU Software are made on
@@ -104,15 +105,22 @@ details on submitting a bug report, please see the section
 <A HREF="#bug">Report a Bug</A> below.
 
 <P>
-To subscribe to any GLPK mailing list, please send an empty mail with
-a Subject: header line of just "subscribe" to the relevant -request
+To subscribe to any GLPK mailing list, send an empty mail with a
+Subject: header line of just "subscribe" to the relevant -request
 list. For example, to subscribe yourself to the main list, you would
 send mail to <A HREF="mailto:help-glpk-request@gnu.org">
 &lt;help-glpk-request@gnu.org&gt;</A> with no body and a Subject:
 header line of just "subscribe".
 
 <P>
-Currently, there is no newsgroup dedicated to GLPK.
+Another way to subscribe is visiting the web pages
+<A HREF="http://mail.gnu.org/mailman/listinfo/help-glpk">
+Help-glpk</A> and
+<A HREF="http://mail.gnu.org/mailman/listinfo/bug-glpk">
+Bug-glpk</A>.
+
+<P>
+Currently there are no newsgroups dedicated to GLPK.
 
 <P>
 <H4><A HREF="#TOCenhancement" NAME="enhancement">Request an Enhancement
@@ -132,10 +140,6 @@ How to help GNU</A>.
 If you think you have found a bug in GLPK, then you should send as
 complete a report as possible to
 <A HREF="mailto:bug-glpk@gnu.org">&lt;bug-glpk@gnu.org&gt;</A>.
-Ideally, you should include the text you get by running
-<EM>config.guess</EM>, the text you see when you run, and
-<EM>configure</EM>, and if you can, a patch made with <EM>diff -u5</EM>
-which fixes the problem.
 
 <P>
 <H4><A HREF="#TOCmaintainer" NAME="maintainer">Maintainer</A></H4>
@@ -162,12 +166,12 @@ The GLPK package is a part of the GNU project, released under the aegis
 of GNU.
 
 <P>
-Copyright © 2000, 2001 Andrew Makhorin, Department for Applied
-Informatics, Moscow Aviation Institute, Moscow, Russia. All rights
-reserved.
+Copyright (C) 2000, 2001, 2002, 2003 Andrew Makhorin, Department for
+Applied Informatics, Moscow Aviation Institute, Moscow, Russia. All
+rights reserved.
 
 <P>
-Free Software Foundation, Inc., 59 Temple Place — Suite 330, Boston,
+Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
 MA 02111, USA.
 
 <P>
@@ -175,7 +179,7 @@ Verbatim copying and distribution of this entire article is permitted
 in any medium, provided this notice is preserved.
 
 <P>
-Updated: 16 Feb 2001
+Updated: 9 May 2003
 
 <HR>
 </BODY>
