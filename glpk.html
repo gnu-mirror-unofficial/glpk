@@ -1,188 +1,217 @@
-<HTML>
-<HEAD>
-<TITLE>GLPK - GNU Project - Free Software Foundation (FSF)</TITLE>
-<LINK REV="made" HREF="mailto:webmasters@www.gnu.org">
-<META NAME="keywords" CONTENT="glpk">
-</HEAD>
-<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#1F00FF" ALINK="#FF0000"
-VLINK="#9900DD">
-<H1>GLPK (GNU Linear Programming Kit)</H1>
-<A HREF="/graphics/agnuhead.html"><IMG SRC="/graphics/gnu-head-sm.jpg"
-ALT=" [image of the Head of a GNU] "
-WIDTH="129" HEIGHT="122"></A>
+<html>
+<head>
+<title>GLPK - GNU Project - Free Software Foundation (FSF)</title>
+<link rev="made" HREF="mailto:webmasters@www.gnu.org">
+<meta name="keywords" content="glpk">
+</head>
 
-<P>
-<HR>
+<body>
+<h1>GLPK (GNU Linear Programming Kit)</h1>
 
-<P>
-<CENTER>
-  <A HREF="#introduction" NAME="TOCintroduction">Introduction</A>
-| <A HREF="#downloading" NAME="TOCdownloading">Get the Software</A>
-| <A HREF="#documentation" NAME="TOCdocumentation">Documentation</A>
-| <A HREF="#lists" NAME="TOClists">Mailing Lists/Newsgroups</A>
-| <A HREF="#enhancement" NAME="TOCenhancement">Request an Enhancement</A>
-| <A HREF="#bug" NAME="TOCbug">Report a Bug</A>
-| <A HREF="#maintainer" NAME="TOCmaintainer">Maintainer</A>
-</CENTER>
+<p>
+<a href="/graphics/agnuhead.html"><img src="/graphics/gnu-head-sm.jpg"
+alt=" [image of the Head of a GNU] " width="129" height="122"></a>
+</p>
 
-<P>
-<HR>
+<p>
+<center>
+<a href="#introduction" name="TOCintroduction">Introduction</a> |
+<a href="#downloading" name="TOCdownloading">Downloading</a> |
+<a href="#documentation" name="TOCdocumentation">Documentation</a> |
+<a href="#lists" name="TOClists">Mailing Lists/Newsgroups</a> |
+<a href="#enhancement" name="TOCenhancement">Request an Enhancement</a>
+| <a href="#bug" name="TOCbug">Report a Bug</a> |
+<a href="#maintainer" name="TOCmaintainer">Maintainer</a>
+</center>
+</p>
 
-<P>
-<H4><A HREF="#TOCintroduction" NAME="introduction">Introduction to GLPK
-</A></H4>
+<hr>
 
-<P>
-The GLPK (<U>G</U>NU <U>L</U>inear <U>P</U>rogramming <U>K</U>it)
+<h3><a href="#TOCintroduction" name="introduction">Introduction to GLPK
+</a></h3>
+
+<p>
+The GLPK (<u>G</u>NU <u>L</u>inear <u>P</u>rogramming <u>K</u>it)
 package is intended for solving large-scale linear programming (LP),
 mixed integer programming (MIP), and other related problems. It is a set
 of routines written in ANSI C and organized in the form of a callable
 library.
+</p>
 
-<P>
-GLPK supports the GNU MathProg language, which is a subset of the AMPL
-language.
+<p>
+GLPK supports the <em>GNU MathProg modeling language</em>, which is a
+subset of the AMPL language.
+</p>
 
-<P>
+<p>
 The GLPK package includes the following main components:
+<ul>
+<li>primal and dual simplex methods
+<li>primal-dual interior-point method
+<li>branch-and-cut method
+<li>translator for GNU MathProg
+<li>application program interface (API)
+<li>stand-alone LP/MIP solver
+</ul>
+</p>
 
-<UL>
-<LI>
-Revised simplex method.
-<LI>
-Primal-dual interior point method.
-<LI>
-Branch-and-bound method.
-<LI>
-Translator for GNU MathProg.
-<LI>
-Application program interface (API).
-<LI>
-Stand-alone LP/MIP solver.
-</UL>
+<h3><a href="#TOCdownloading" name="downloading">Downloading GLPK</a>
+</h3>
 
-<P>
-<H4><A HREF="#TOCdownloading" NAME="downloading">Downloading GLPK</A>
-</H4>
+<p>
+The GLPK distribution tarball can be found on
+<a href="http://ftp.gnu.org/gnu/glpk/">http://ftp.gnu.org/gnu/glpk/</a>
+[via http] and
+<a href="ftp://ftp.gnu.org/gnu/glpk/">ftp://ftp.gnu.org/gnu/glpk/</a>
+[via FTP].
+It can also be found on one of <a href="/prep/ftp.html">our FTP
+mirrors</a>; please use a mirror if possible.
+</p>
 
-<P>
-The GLPK distribution can be found in the subdirectory
-<CODE>/gnu/glpk/</CODE> on your favorite <A HREF="/prep/ftp.html">GNU
-mirror</A>. For other ways to obtain GLPK, please read
-<A HREF="/software/software.html#HowToGetSoftware">How to get GNU
-Software</A>.
+<p>
+To make sure that the GLPK distribution tarball you have downloaded
+is intact you need to download the corresponding .sig file and run a
+command like this:
+</p>
 
-<P>
-<H4><A HREF="#TOCdocumentation" NAME="documentation">Documentation</A>
-</H4>
+<p>
+<code>gpg --verify glpk-4.32.tar.gz.sig</code>
+</p>
+
+<p>
+If that command fails because you do not have the required public key,
+run the following command to import it:
+</p>
+
+<p>
+<code>gpg --keyserver keys.gnupg.net --recv-keys 5981E818</code>
+</p>
+
+<p>
+and then re-run the previous command.
+</p>
+
+<h3><a href="#TOCdocumentation" name="documentation">Documentation</a>
+</h3>
+
+<p>
 The GLPK documentation consists of the Reference Manual and the
-description of the GNU MathProg language. Both these documents are
-included in the distribution (in LaTeX, DVI, and PostScript formats).
+description of the GNU MathProg modeling language. Both these documents
+are included in the distribution (in LaTeX, DVI, and PostScript
+formats).
+</p>
 
-<P>
-<H4><A HREF="#TOClists" NAME="lists">Mailing Lists/Newsgroups</A></H4>
+<h3><a href="#TOClists" name="lists">Mailing Lists/Newsgroups</a></h3>
+
+<p>
 GLPK has two mailing lists:
-<A HREF="mailto:help-glpk@gnu.org">&lt;help-glpk@gnu.org&gt;</A>
-and <A HREF="mailto:bug-glpk@gnu.org">&lt;bug-glpk@gnu.org&gt;</A>.
+<a href="mailto:help-glpk@gnu.org"><em>help-glpk@gnu.org</em></a>
+and <a href="mailto:bug-glpk@gnu.org"><em>bug-glpk@gnu.org</em></a>.
+</p>
 
-<P>
+<p>
 The main discussion list is
-<A HREF="mailto:help-glpk@gnu.org">&lt;help-glpk@gnu.org&gt;</A>,
-and is used to discuss all aspects of GLPK, including its development
-and porting.
+<a href="mailto:help-glpk@gnu.org"><em>help-glpk@gnu.org</em></a>,
+and is used to discuss all aspects of GLPK, including development and
+porting.
+</p>
 
-<P>
-Announcements about GLPK and most other GNU Software are made on
-<A HREF="mailto:info-gnu@gnu.org">&lt;info-gnu@gnu.org&gt;</A>.
-
-<P>
-There is also a special list used for reporting bugs,
-<A HREF="mailto:bug-glpk@gnu.org">&lt;bug-glpk@gnu.org&gt;</A>. For
+<p>
+There is a separate list used for reporting bugs,
+<a href="mailto:bug-glpk@gnu.org"><em>bug-glpk@gnu.org</em></a>. For
 details on submitting a bug report, please see the section
-<A HREF="#bug">Report a Bug</A> below.
+<a href="#bug">Report a Bug</a> below.
+</p>
 
-<P>
-To subscribe to any GLPK mailing list, send an empty mail with a
-Subject: header line of just "subscribe" to the relevant -request
-list. For example, to subscribe yourself to the main list, you would
-send mail to <A HREF="mailto:help-glpk-request@gnu.org">
-&lt;help-glpk-request@gnu.org&gt;</A> with no body and a Subject:
-header line of just "subscribe".
+<p>
+Announcements about GLPK and most other GNU Software are made on
+<a href="mailto:info-gnu@gnu.org"><em>info-gnu@gnu.org</em></a>.
+</p>
 
-<P>
-Another way to subscribe is visiting the web pages
-<A HREF="http://mail.gnu.org/mailman/listinfo/help-glpk">
-Help-glpk</A> and
-<A HREF="http://mail.gnu.org/mailman/listinfo/bug-glpk">
-Bug-glpk</A>.
+<p>
+To subscribe to these or any GNU mailing lists, please send an empty
+mail with a Subject: header line of just "subscribe" to the relevant
+-request list. For example, to subscribe yourself to the main GLPK
+discussion list, you would send mail to
+<a href="mailto:help-glpk-request@gnu.org">
+<em>help-glpk-request@gnu.org</em></a> with no body and a Subject:
+header line of just "subscribe". Another way to subscribe is to use the
+mailing list interface; see
+<a href="http://mail.gnu.org/mailman/listinfo/help-glpk">
+Help-glpk</a> and
+<a href="http://mail.gnu.org/mailman/listinfo/bug-glpk">
+Bug-glpk</a>.
+</p>
 
-<P>
+<p>
 Currently there are no newsgroups dedicated to GLPK.
+</p>
 
-<P>
-<H4><A HREF="#TOCenhancement" NAME="enhancement">Request an Enhancement
-</A></H4>
+<h3><a href="#TOCenhancement" name="enhancement">Request an Enhancement
+</a></h3>
+
+<p>
 If you would like any new feature to be included in future versions of
 GLPK, please send a request to
-<A HREF="mailto:help-glpk@gnu.org">&lt;help-glpk@gnu.org&gt;</A>.
+<a href="mailto:help-glpk@gnu.org"><em>help-glpk@gnu.org</em></a>.
+</p>
 
-<P>
+<p>
 Please remember that development of GLPK is a volunteer effort, and
 you can also contribute to its development. For information about
-contributing to the GNU Project, please read <A HREF="/help/help.html">
-How to help GNU</A>.
+contributing to the GNU Project, please read <a href="/help/">How to
+help GNU</a>.
+</p>
 
-<P>
-<H4><A HREF="#TOCbug" NAME="bug">Report a Bug</A></H4>
-If you think you have found a bug in GLPK, then you should send as
-complete a report as possible to
-<A HREF="mailto:bug-glpk@gnu.org">&lt;bug-glpk@gnu.org&gt;</A>.
+<h3><a href="#TOCbug" name="bug">Report a Bug</a></h3>
 
-<P>
-<H4><A HREF="#TOCmaintainer" NAME="maintainer">Maintainer</A></H4>
+<p>
+If you think you have found a bug in GLPK, then please send as complete
+a report as possible to
+<a href="mailto:bug-glpk@gnu.org"><em>bug-glpk@gnu.org</em></a>.
+</p>
+
+<h3><a href="#TOCmaintainer" name="maintainer">Maintainer</a></h3>
+
+<p>
 GLPK is currently being maintained by
-<A HREF="mailto:mao@mai2.rcnet.ru">&lt;mao@mai2.rcnet.ru&gt;</A>.
+<a href="mailto:mao@gnu.org"><em>mao@gnu.org</em></a>,
+<a href="mailto:mao@mai2.rcnet.ru"><em>mao@mai2.rcnet.ru</em></a>.
+</p>
 
-<P>
-<HR>
+<hr>
 
-<P>
-Return to <A HREF="/home.html">GNU's home page</A>.
+<p>
+Please send FSF &amp; GNU inquiries to
+<a href="mailto:gnu@gnu.org"><em>gnu@gnu.org</em></a>.
+There are also <a href="/contact/">other ways to contact</a> the FSF.
+</p>
 
-<P>
-Please send FSF &amp; GNU inquiries &amp; questions to
-<A HREF="mailto:gnu@gnu.org"><EM>gnu@gnu.org</EM></A>.
-There are also <A HREF="http://www.fsf.org/about/contact.html">other ways to contact
-</A> the FSF.
-
-<P>
-Please send comments on these web pages to
-<A HREF="mailto:webmasters@gnu.org"><EM>webmasters@gnu.org</EM></A>,
-send other questions to
-<A HREF="mailto:gnu@gnu.org"><EM>gnu@gnu.org</EM></A>.
-
-<P>
-The GLPK package is a part of the GNU project, released under the aegis
+<p>
+The GLPK package is part of the GNU project, released under the aegis
 of GNU.
+</p>
 
-<P>
-Copyright &copy; 2000, 2001, 2002, 2003 <br> Andrew Makhorin, Department for
-Applied Informatics, Moscow Aviation Institute, Moscow, Russia. All
-rights reserved.
+<p>
+Copyright &copy; 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008
+Andrew Makhorin, Department for Applied Informatics, Moscow Aviation
+Institute, Moscow, Russia. All rights reserved.
+</p>
 
-<P>
-Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA
+<p>
+Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+MA 02110-1301, USA.
+</p>
 
-<P>
-Verbatim copying and distribution of this entire article is permitted
-in any medium, provided this notice is preserved.
+<p>
+Verbatim copying and distribution of this entire article are permitted
+worldwide, without royalty, in any medium, provided this notice, and the
+copyright notice, are preserved.
+</p>
 
-<P>
-Updated: 
-$Date: 2006/11/23 07:58:44 $ $Author: ramprasadb $
+<p>
+Updated: $Date: 2008/10/16 21:16:03 $
+</p>
 
-<P>
-<HR>
-
-</BODY>
-</HTML>
+</body>
+</html>
